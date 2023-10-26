@@ -1,7 +1,13 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
 
 const app = express();
+
+// Pour obtenir le chemin du répertoire actuel avec ES6
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Servez les fichiers statiques depuis le dossier dist
 app.use(express.static(path.join(__dirname, "dist")));
