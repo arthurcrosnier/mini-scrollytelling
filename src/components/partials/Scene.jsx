@@ -2,37 +2,17 @@ import React, { useEffect } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 export function Model({ setIsModelLoaded, ...props }) {
-  const { nodes, materials } = useGLTF("/src/assets/hegra/scene.gltf");
-  const texture0 = useTexture(
-    "/src/assets/hegra/textures/Model_0_baseColor.jpeg"
-  );
-  const texture1 = useTexture(
-    "/src/assets/hegra/textures/Model_1_baseColor.jpeg"
-  );
-  const texture2 = useTexture(
-    "/src/assets/hegra/textures/Model_2_baseColor.jpeg"
-  );
-  const texture3 = useTexture(
-    "/src/assets/hegra/textures/Model_3_baseColor.jpeg"
-  );
-  const texture4 = useTexture(
-    "/src/assets/hegra/textures/Model_4_baseColor.jpeg"
-  );
-  const texture5 = useTexture(
-    "/src/assets/hegra/textures/Model_5_baseColor.jpeg"
-  );
-  const texture6 = useTexture(
-    "/src/assets/hegra/textures/Model_6_baseColor.jpeg"
-  );
-  const texture7 = useTexture(
-    "/src/assets/hegra/textures/Model_7_baseColor.jpeg"
-  );
-  const texture8 = useTexture(
-    "/src/assets/hegra/textures/Model_8_baseColor.jpeg"
-  );
-  const texture9 = useTexture(
-    "/src/assets/hegra/textures/Model_9_baseColor.jpeg"
-  );
+  const { nodes, materials } = useGLTF("/hegra/scene.gltf");
+  const texture0 = useTexture("/hegra/textures/Model_0_baseColor.jpeg");
+  const texture1 = useTexture("/hegra/textures/Model_1_baseColor.jpeg");
+  const texture2 = useTexture("/hegra/textures/Model_2_baseColor.jpeg");
+  const texture3 = useTexture("/hegra/textures/Model_3_baseColor.jpeg");
+  const texture4 = useTexture("/hegra/textures/Model_4_baseColor.jpeg");
+  const texture5 = useTexture("/hegra/textures/Model_5_baseColor.jpeg");
+  const texture6 = useTexture("/hegra/textures/Model_6_baseColor.jpeg");
+  const texture7 = useTexture("/hegra/textures/Model_7_baseColor.jpeg");
+  const texture8 = useTexture("/hegra/textures/Model_8_baseColor.jpeg");
+  const texture9 = useTexture("/hegra/textures/Model_9_baseColor.jpeg");
 
   useEffect(() => {
     if (nodes && materials) {
@@ -79,6 +59,6 @@ export function Model({ setIsModelLoaded, ...props }) {
   );
 }
 
-useGLTF.preload("/src/assets/hegra/scene.gltf");
+useGLTF.preload("/hegra/scene.gltf");
 
 export default Model;
